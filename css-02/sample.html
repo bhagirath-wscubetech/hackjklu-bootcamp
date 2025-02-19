@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Verdana;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e0f7fa, #80deea);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            color: #00796b;
+            font-weight: 600;
+        }
+        h2 {
+            color: #004d40;
+            border-bottom: 3px solid #004d40;
+            padding-bottom: 5px;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+        }
+        .section {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e0f2f1;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 400;
+        }
+        ul li:hover {
+            background: #9cbcbb;
+        }
+        .exp{
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+        }
+        .exp li{
+            width: 45%;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            border: 2px solid #00796b;
+            border-bottom-color: transparent;
+            transition: transform 0.3s ease-in-out;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
+        <header>
+            <h1>Bhagirath Giri</h1>
+            <h1>Mentor at WsCube</h1>
+            <p>Email: johndoe@example.com | Phone: (123) 456-7890 | Location: City, Country</p>
+        </header>
+        
+        <div class="section">
+            <h2>Experience</h2>
+            <ul class="exp">
+                <li><strong>Software Developer</strong> <br> ABC Company (2022 - Present)</li>
+                <li><strong>Web Developer Intern</strong> <br> XYZ Corp (2021 - 2022)</li>
+                <li><strong>Web Developer Intern</strong> <br> XYZ Corp (2021 - 2022)</li>
+                <li><strong>Web Developer Intern</strong> <br> XYZ Corp (2021 - 2022)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Bachelor of Science in Computer Science</strong> - University Name (2018 - 2022)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React.js, Node.js</li>
+                <li>Git, GitHub</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: #34495e; */
+            background-color: rgb(52, 73, 94);
+            font-family: Verdana;
+            margin: 0;
+            /* hexadecimal */
+        }
+
+        .container {
+            border:5px rgb(9, 132, 227) solid;
+            width: 1000px;
+            min-height: 100vh;
+            background-color: rgb(236, 240, 241);
+            margin: 25px auto;
+            border-radius: 15px;
+            /* viewport height */
+        }
+
+        .image-section {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .my-image {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 3px #3498db solid;
+            overflow: hidden;
+        }
+
+        .img{
+            width: 100%;
+            transition: 500ms;
+            height: 100%;
+        }
+        .img:hover{
+            transform: scale(1.1);
+        }
+
+        .bio-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .exp-section {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .heading {
+            font-weight: bold;
+            font-size: 28px;
+            border-bottom: 3px #e67e22 solid;
+            padding-bottom: 10px;
+        }
+
+        .exp-box {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 30px;
+            /* justify-content: space-between; */
+        }
+
+        .exp-item {
+            margin-bottom: 5px;
+            width: 47%;
+            background-color: rgb(0, 206, 201);
+            /* 0 to 1 */
+            border-radius: 10px;
+            padding: 5px;
+            color: white;
+            transition: 400ms;
+            /* 1 sec = 1000 ms */
+        }
+
+        .wscube {
+            transition: 500ms;
+        }
+
+        .wscube:hover {
+            transform: scale(1.2);
+        }
+
+        .exp-item:hover {
+            background-color: rgb(52, 73, 94);
+        }
+
+        .exp-item b {
+            font-size: 18px;
+        }
+
+        .eduction {
+            display: initial !important;
+        }
+
+        .eduction .exp-item {
+            /* parent child */
+            margin-top: 10px !important;
+            width: 90% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Image section -->
+        <div class="image-section">
+            <div class="my-image">
+                <img src="images/profile.png" class="img" alt="">
+            </div>
+        </div>
+        <!-- Bio section -->
+        <div class="bio-section">
+            <h1 style="color:#3498db">Bhagirath Giri</h1>
+            <h1 class="wscube" style="color:#34495e">Mentor at WsCube</h1>
+            <p>
+                Email: johndoe@example.com | Phone: (123) 456-7890 | Location: City, Country
+            </p>
+        </div>
+        <!-- Experience section -->
+        <div class="exp-section">
+            <div class="heading">Experiences</div>
+            <div class="exp-box">
+                <div class="exp-item">
+                    <b>XYZ Pvt Ltd</b>
+
+                    2020 to 2022
+                </div>
+                <div class="exp-item">
+                    <b>XYZ Pvt Ltd</b>
+
+                    2020 to 2022
+                </div>
+                <div class="exp-item">
+                    <b>XYZ Pvt Ltd</b>
+
+                    2020 to 2022
+                </div>
+                <div class="exp-item">
+                    <b>XYZ Pvt Ltd</b>
+
+                    2020 to 2022
+                </div>
+                <div class="exp-item">
+                    <b>XYZ Pvt Ltd</b>
+
+                    2020 to 2022
+                </div>
+            </div>
+        </div>
+
+        <!-- Education section -->
+        <div class="exp-section">
+            <div class="heading">Education</div>
+            <div class="exp-box eduction">
+                <div class="exp-item">
+                    <b>Bachelor of Science in Computer Science </b> - University Name (2018 - 2022)
+                </div>
+                <div class="exp-item">
+                    <b>Masters of Science in Computer Science </b> - University Name (2022 - 2024)
+                </div>
+                <div class="exp-item">
+                    <b>PHD</b> - University Name (2024 - Present)
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
