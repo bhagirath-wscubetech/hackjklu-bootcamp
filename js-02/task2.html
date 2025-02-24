@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 30px;
+            border: 1px black solid;
+            margin-bottom: 5px;
+        }
+
+        img {
+            transition: 900ms;
+        }
+
+        .box {
+            width: 5%;
+            /* 10% of 400 => 40px */
+            height: 100%;
+            background-color: red;
+            transition: 600ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <img src="https://picsum.photos/200/300?random=1" alt="">
+        <img style="opacity:0;" src="https://picsum.photos/200/300?random=2" alt="">
+        <img style="opacity:0;" src="https://picsum.photos/200/300?random=3" alt="">
+    </div>
+    <div class="container">
+        <div class="box">5%</div>
+    </div>
+    <button onclick="inc()">Inc</button>
+    <button onclick="desc()">Desc</button>
+    <script>
+        //  number + number = number
+        //  number + string = string
+        //  string + string = string
+
+        var current_size = 5;
+        var boxElem = document.querySelector('.box');
+        var images = document.querySelectorAll(".parent img");
+        console.log(images);
+
+        function inc() {
+            if (current_size == 100) return; // End Of Function
+            current_size += 5; // current_size = current_size + 5
+            boxElem.style.width = current_size + "%"; // "20%"
+            boxElem.innerText = current_size + "%";
+            colorController();
+        }
+
+        function desc() {
+            if (current_size == 0) return;
+            current_size -= 5;
+            boxElem.style.width = current_size + "%";
+            boxElem.innerText = current_size + "%";
+            colorController();
+        }
+
+        function colorController() {
+            if (current_size >= 0 && current_size <= 35) {
+                boxElem.style.background = "red";
+                images[1].style.opacity = 0;
+                images[2].style.opacity = 0;
+                // images[1].style.display = "none";
+                // images[2].style.display = "none";
+            } else if (current_size > 35 && current_size <= 70) {
+                // images[1].style.display = "initial";
+                // images[2].style.display = "none";
+                images[1].style.opacity = 1;
+                images[2].style.opacity = 0;
+                boxElem.style.background = "green";
+            } else {
+                // images[2].style.display = "initial";
+                images[2].style.opacity = 1;
+                boxElem.style.background = "blue";
+            }
+        }
+    </script>
+</body>
+
+</html>

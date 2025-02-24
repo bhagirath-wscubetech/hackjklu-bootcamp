@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            transition: 600ms;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="demo(this)">Btn1</button>
+    <button onclick="demo(this)">Btn2</button>
+    <button onclick="demo(this)">Btn3</button>
+    <script>
+        function demo(element) {
+            element.style.background = "salmon";
+            element.innerText = 'Clicked';
+        }
+    </script>
+</body>
+
+</html>
