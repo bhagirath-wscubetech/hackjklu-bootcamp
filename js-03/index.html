@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 500ms;
+            align-items: center;
+            top: 0;
+        }
+
+        .card {
+            width: 350px;
+            height: 400px;
+            background-color: white;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 700ms;
+        }
+
+        .btn {
+            margin: 10px;
+            width: 300px;
+            font-size: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" onclick="showPopup()">Book Mentor Session</button>
+    <div class="wrapper">
+        <div class="card">
+            <button class="btn" onclick="hidePopup()">Close</button>
+        </div>
+    </div>
+    <script>
+        const warpper = document.querySelector('.wrapper');
+        const card = document.querySelector('.card');
+        function showPopup() {
+            warpper.style.opacity = 1;
+            warpper.style.visibility = 'visible';
+            card.style.transform = "scaleX(1)";
+        }
+        function hidePopup() {
+            warpper.style.opacity = 0;
+            warpper.style.visibility = 'hidden';
+            card.style.transform = "scaleX(0)";
+        }
+    </script>
+</body>
+
+</html>

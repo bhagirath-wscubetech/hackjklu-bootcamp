@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* select * from students */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+            height: 600px;
+            display: flex;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .left {
+            width: 200px;
+            height: 100%;
+        }
+
+        .right {
+            width: 800px;
+            height: 100%;
+        }
+
+        .left img {
+            width: 100%;
+            height: 25%;
+        }
+
+        #main-image {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/1.jpeg" onmouseenter="changeImage(this)" alt="">
+            <img src="images/2.jpeg" onmouseenter="changeImage(this)" alt="">
+            <img src="images/3.jpg" onmouseenter="changeImage(this)" alt="">
+            <img src="images/4.jpeg" onmouseenter="changeImage(this)" alt="">
+        </div>
+        <div class="right">
+            <img src="images/1.jpeg" id="main-image" alt="">
+        </div>
+    </div>
+
+    <script>
+        const mainImage = document.querySelector("#main-image");
+        function changeImage(img) {
+            // console.log(img.src);
+            mainImage.src = img.src;
+        }
+    </script>
+</body>
+
+</html>
